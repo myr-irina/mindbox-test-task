@@ -1,7 +1,18 @@
-.wrapper {
+.todoItem {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  border: 1px solid gray;
+  padding: 1rem;
+  background-color: white;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+  transition: background 0.2s ease;
+}
+
+.todoItem:not(:last-child) {
+  margin-bottom: -1px;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
 }

@@ -1,11 +1,22 @@
 import style from "./style.module.css";
 import type { Todo } from "../../types/types";
-import { Typography } from "antd";
+import { Checkbox } from "antd";
+import cn from "classnames";
 
-const TodoItem = ({ todo }: { todo: Todo }) => {
+interface ITodoItem {
+  todo: Todo;
+  onToggle: (id: string) => void;
+}
+
+const TodoItem = ({ todo, onToggle }: ITodoItem) => {
+  const onChange = () => {
+    onToggle(todo.id);
+  };
   return (
-    <li className={style.wrapper}>
-      <Typography.Text>{todo.text}</Typography.Text>
+    <li className={cn(style.todoItem, { [style.completed]: todo.completed })}>
+      <Checkbox checked={todo.completed} onChange={onChange}>
+        {todo.text}
+      </Checkbox>
     </li>
   );
 };
