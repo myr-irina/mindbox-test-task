@@ -1,6 +1,8 @@
-# Тестовое задание Frontend middle в Mindbox
+# Тестовое задание Frontend Middle в Mindbox
 
-## Как запустить
+[Открыть демо](https://myr-irina.github.io/mindbox-test-task/)
+
+## Или запустить локльно
 
 1. **Клонируйте репозиторий:**
 
@@ -32,6 +34,7 @@
 ## Технологии
 
 - React
+- React hooks
 - TypeScript
 - Ant Design
 - CSS-модули
