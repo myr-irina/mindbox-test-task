@@ -1,5 +1,6 @@
 import { Form, Input } from "antd";
 import { useState } from "react";
+import styles from "./styles.module.css";
 
 const TodoInput = ({ onAdd }: { onAdd: (text: string) => void }) => {
   const [form] = Form.useForm();
@@ -17,11 +18,13 @@ const TodoInput = ({ onAdd }: { onAdd: (text: string) => void }) => {
     <Form form={form} onFinish={onFinish}>
       <Form.Item
         name="todo"
-        rules={[{ required: true, message: "Please enter a todo" }]}>
+        rules={[{ required: true, message: "Please enter a todo" }]}
+        className={styles.item}>
         <Input
           value={text}
           onChange={(e) => setText(e.target.value)}
-          placeholder="Enter todo"
+          placeholder="What needs to be done?"
+          className={styles.input}
         />
       </Form.Item>
     </Form>

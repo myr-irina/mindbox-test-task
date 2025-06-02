@@ -1,4 +1,70 @@
-.wrapper {
+.filters {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  padding: 0.5rem;
+  gap: 1rem;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid #d0d0d0;
+  position: relative;
+  border-bottom: 2px solid #e0e0e0;
+  color: #d0d0d0;
+  font-size: 12px !important;
+}
+
+.filters::after,
+.filters::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 0;
+  background: #fff;
+  pointer-events: none;
+}
+
+.filters::before {
+  left: 2px;
+  right: 2px;
+  bottom: -4px;
+  height: 4px;
+  border: 1px solid #d0d0d0;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+  z-index: 10;
+}
+.filters::after {
+  left: 4px;
+  right: 4px;
+  bottom: -7px;
+  height: 6px;
+  border: 1px solid #d0d0d0;
+  border-top: none;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+}
+
+.buttons {
+  display: flex;
+  gap: 0.5rem;
+  color: #d0d0d0;
+}
+
+.button {
+  border: none;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  transition: border 0.2s;
+  padding: 0;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  font-size: 12px !important;
+}
+
+.button-bordered {
+  border: 1.5px solid #d0d0d0;
+  color: #2b3a4b;
 }

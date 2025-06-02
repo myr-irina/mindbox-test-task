@@ -7,7 +7,7 @@ import TodoFilters from "./components/todo-filters/todo-filters";
 import { useState } from "react";
 
 function App() {
-  const { todos, addTodo, toggleTodo, clearCompleted } = useTodos();
+  const { todos, addTodo, toggleTodo, clearCompleted, loading } = useTodos();
 
   const [filter, setFilter] = useState<"all" | "completed" | "active">("all");
 
@@ -21,7 +21,7 @@ function App() {
   return (
     <div className={styles.container}>
       <TodoInput onAdd={addTodo} />
-      <TodoList todos={filteredTodos} onToggle={toggleTodo} />
+      <TodoList todos={filteredTodos} onToggle={toggleTodo} loading={loading} />
       <TodoFilters
         filter={filter}
         setFilter={setFilter}

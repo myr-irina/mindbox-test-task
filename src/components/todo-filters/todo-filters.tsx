@@ -1,4 +1,6 @@
+import { Button } from "antd";
 import styles from "./styles.module.css";
+import cn from "classnames";
 
 interface ITodoFilters {
   filter: "all" | "active" | "completed";
@@ -14,28 +16,41 @@ const TodoFilters = ({
   itemsLeft
 }: ITodoFilters) => {
   return (
-    <div className={styles.wrapper}>
-      <span>{itemsLeft} items left</span>
-      <div>
-        <button
+    <div className={cn(styles.filters, styles.empty)}>
+      <span style={{ paddingRight: "1.4rem" }}>{itemsLeft} items left</span>
+      <div className={styles.buttons}>
+        <Button
+          type="text"
           onClick={() => setFilter("all")}
-          className={filter === "all" ? "font-bold" : ""}>
-          Все
-        </button>
-        <button
+          className={cn(styles.button, {
+            [styles["button-bordered"]]: filter === "all"
+          })}>
+          All
+        </Button>
+        <Button
+          type="text"
           onClick={() => setFilter("active")}
-          className={filter === "active" ? "font-bold" : ""}>
-          Активные
-        </button>
-        <button
+          className={cn(styles.button, {
+            [styles["button-bordered"]]: filter === "active"
+          })}>
+          Active
+        </Button>
+        <Button
+          type="text"
           onClick={() => setFilter("completed")}
-          className={filter === "completed" ? "font-bold" : ""}>
-          Завершённые
-        </button>
+          className={cn(styles.button, {
+            [styles["button-bordered"]]: filter === "completed"
+          })}>
+          Completed
+        </Button>
       </div>
-      <button onClick={onClear} className="text-red-500">
-        Удалить завершённые
-      </button>
+      <Button
+        type="text"
+        onClick={onClear}
+        className={styles.button}
+        style={{ paddingLeft: "1.4rem" }}>
+        Clear completed
+      </Button>
     </div>
   );
 };

@@ -1,0 +1,25 @@
+.item {
+  margin-bottom: 0;
+  min-height: 56px;
+}
+
+.input {
+  min-height: 56px;
+  border-radius: 0;
+}
+
+.input::placeholder {
+  font-style: italic;
+}
+.input::-webkit-input-placeholder {
+  font-style: italic;
+}
+.input::-moz-placeholder {
+  font-style: italic;
+}
+.input:-ms-input-placeholder {
+  font-style: italic;
+}
+.input::-ms-input-placeholder {
+  font-style: italic;
+}

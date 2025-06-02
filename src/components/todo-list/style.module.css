@@ -1,5 +1,15 @@
 .todolist {
-  list-style: none;
+  min-height: 160px;
   padding: 0;
   margin: 0;
+  list-style: none;
+  transition: min-height 0.2s;
+}
+
+.loader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
 }
