@@ -1,0 +1,17 @@
+.collapseHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  background: white;
+  min-height: 48px;
+}
+
+.caret {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 22px;
+  color: #bfbfbf;
+  user-select: none;
+}

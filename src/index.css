@@ -24,3 +24,33 @@ body,
 #root {
   font-size: 10px;
 }
+
+.ant-collapse-content-box {
+  padding: 0 !important;
+}
+
+.ant-input-outlined {
+  border: none;
+}
+
+.ant-checkbox-inner {
+  border-radius: 50% !important;
+  border: 2px solid #bfbfbf !important;
+  width: 24px !important;
+  height: 24px !important;
+  background: #fff !important;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner {
+  background: #fff !important;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner::after {
+  border-color: #52c41a !important;
+  border-width: 0 3px 3px 0 !important;
+  width: 8px !important;
+  height: 14px !important;
+  left: 50% !important;
+  top: 35% !important;
+  transform: translate(-50%, -50%) rotate(45deg) !important;
+}

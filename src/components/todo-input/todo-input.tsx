@@ -25,6 +25,7 @@ const TodoInput = ({ onAdd }: { onAdd: (text: string) => void }) => {
           onChange={(e) => setText(e.target.value)}
           placeholder="What needs to be done?"
           className={styles.input}
+          onPressEnter={onFinish}
         />
       </Form.Item>
     </Form>
